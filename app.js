@@ -5,7 +5,11 @@ app.get('/', function (req, res) {
 	res.send('Hello Universe!')
 })
 
-app.get('/palindrome/:val', function (req, res) {
+app.get('/palindrome/:val', controlPalindrome, function (req, res) {
+	console.log("EXITING");
+})
+
+function controlPalindrome(req, res, next){
 	var val = req.params.val // original value
 	var valwsp = val.replace(/\s/g, '') // original value without spaces
 	var valrvrs = val.split('').reverse().join('') // reversed value
@@ -22,8 +26,9 @@ app.get('/palindrome/:val', function (req, res) {
 		res.status(400);
 		res.send('IS NOT A PALINDROME');
 	}
+	next();
 	// res.send(req.params)
-})
+}
 
 app.listen(3000, function () {
   console.log('App listening on port 3000!')

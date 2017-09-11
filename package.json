@@ -7,8 +7,14 @@
   },
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    // "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --compilers js:babel/register"
   },
   "author": "Aldo Espinola",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "expect": "^21.0.2",
+    "mocha": "^3.5.3"
+  }
 }
