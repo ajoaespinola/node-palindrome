@@ -1,0 +1,14 @@
+{
+  "name": "palindrome",
+  "version": "1.0.0",
+  "description": "Handle requests with a word or phrase and return responses",
+  "dependencies": {
+    "express": "^4.15.4"
+  },
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aldo Espinola",
+  "license": "ISC"
+}
